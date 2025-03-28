@@ -22,40 +22,45 @@ module rca_4bits_tb;
     // Clock generation
     initial begin
         clk = 1;
-        forever #(period/2) clk = ~clk;
+        forever #(period / 2) clk = ~clk;
     end
 
-    // Test sequence
     initial begin
         enable = 0;
         A = 4'b0000;
         B = 4'b0000;
         Cin = 1'b0;
 
-        @(negedge clk);  apply(4'b0001, 4'b0101, 1'b0);  // 1 + 5
-        @(negedge clk);  apply(4'b0111, 4'b0111, 1'b0);  // 7 + 7
-        @(negedge clk);  apply(4'b1000, 4'b0111, 1'b1);  // 8 + 7 + 1
-        @(negedge clk);  apply(4'b1100, 4'b0100, 1'b0);  // 12 + 4
-        @(negedge clk);  apply(4'b1000, 4'b1000, 1'b1);  // 8 + 8 + 1
-        @(negedge clk);  apply(4'b1001, 4'b1010, 1'b1);  // 9 + 10 + 1
-        @(negedge clk);  apply(4'b1111, 4'b1111, 1'b0);  // 15 + 15
+        @(negedge clk);
+        A = 4'b0001; B = 4'b0101; Cin = 1'b0; enable = 1;
+        @(negedge clk); enable = 0;
+
+        @(negedge clk);
+        A = 4'b0111; B = 4'b0111; Cin = 1'b0; enable = 1;
+        @(negedge clk); enable = 0;
+
+        @(negedge clk);
+        A = 4'b1000; B = 4'b0111; Cin = 1'b1; enable = 1;
+        @(negedge clk); enable = 0;
+
+        @(negedge clk);
+        A = 4'b1100; B = 4'b0100; Cin = 1'b0; enable = 1;
+        @(negedge clk); enable = 0;
+
+        @(negedge clk);
+        A = 4'b1000; B = 4'b1000; Cin = 1'b1; enable = 1;
+        @(negedge clk); enable = 0;
+
+        @(negedge clk);
+        A = 4'b1001; B = 4'b1010; Cin = 1'b1; enable = 1;
+        @(negedge clk); enable = 0;
+
+        @(negedge clk);
+        A = 4'b1111; B = 4'b1111; Cin = 1'b0; enable = 1;
+        @(negedge clk); enable = 0;
 
         @(negedge clk);
         $finish;
     end
-
-    // Task to apply inputs on negedge and pulse enable
-    task apply(input [3:0] a, input [3:0] b, input c);
-        begin
-            A <= a;
-            B <= b;
-            Cin <= c;
-            enable <= 1;
-            @(negedge clk);  // wait 1 negedge to latch
-            enable <= 0;
-            @(negedge clk);  // let output settle
-            $display("A=%b B=%b Cin=%b | Sum=%b Cout=%b", A, B, Cin, Q[3:0], Q[4]);
-        end
-    endtask
 
 endmodule
