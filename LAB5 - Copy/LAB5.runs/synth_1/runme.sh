@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log RCA_4bits.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source RCA_4bits.tcl
+EAStep vivado -log CLA_4bits.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source CLA_4bits.tcl

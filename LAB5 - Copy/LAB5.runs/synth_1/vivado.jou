@@ -3,11 +3,11 @@
 # SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
 # IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
 # SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-# Start of session at: Thu Mar 27 20:54:46 2025
-# Process ID         : 52652
+# Start of session at: Fri Mar 28 16:31:53 2025
+# Process ID         : 34660
 # Current directory  : C:/Users/samue/Downloads/316/LAB5_316/LAB5 - Copy/LAB5.runs/synth_1
-# Command line       : vivado.exe -log RCA_4bits.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RCA_4bits.tcl
-# Log file           : C:/Users/samue/Downloads/316/LAB5_316/LAB5 - Copy/LAB5.runs/synth_1/RCA_4bits.vds
+# Command line       : vivado.exe -log CLA_4bits.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CLA_4bits.tcl
+# Log file           : C:/Users/samue/Downloads/316/LAB5_316/LAB5 - Copy/LAB5.runs/synth_1/CLA_4bits.vds
 # Journal file       : C:/Users/samue/Downloads/316/LAB5_316/LAB5 - Copy/LAB5.runs/synth_1\vivado.jou
 # Running On         : Kamsi
 # Platform           : Windows Server 2016 or Windows 10
@@ -19,6 +19,6 @@
 # Host memory        : 16794 MB
 # Swap memory        : 24895 MB
 # Total Virtual      : 41689 MB
-# Available Virtual  : 4167 MB
+# Available Virtual  : 7318 MB
 #-----------------------------------------------------------
-source RCA_4bits.tcl -notrace
+source CLA_4bits.tcl -notrace

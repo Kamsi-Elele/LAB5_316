@@ -18,7 +18,7 @@ module RCA_4bits (
     full_adder adder_2 (A[2], B[2], cout[1],  sum[2], cout[2]);
     full_adder adder_3 (A[3], B[3], cout[2],  sum[3], cout[3]);
 
-    assign Q = {cout[3], sum};  // MSB = carry out, LSB = sum
+    assign result = {cout[3], sum};  // MSB = carry out, LSB = sum
 
     register_logic reg1 (.clk(clk), .enable(enable), .Data(result), .Q(Q));
 

@@ -28,7 +28,9 @@ module cla_4bits_tb;
     // Test sequence
     initial begin
         enable = 0;
-        A = 0; B = 0;  Cin = 1'b0;;
+        A = 4'b0000;
+        B = 4'b0000;
+        Cin = 1'b0;
 
         @(negedge clk); 
         A = 4'b0000; B = 4'b0101; Cin = 0; enable = 1;
@@ -41,7 +43,7 @@ module cla_4bits_tb;
         @(negedge clk); 
         A = 4'b1000; B = 4'b0111; Cin = 1; enable = 1;
         @(negedge clk); enable = 0;
-
+        
         @(negedge clk); 
         A = 4'b1001; B = 4'b0100; Cin = 0; enable = 1;
         @(negedge clk); enable = 0;
@@ -58,7 +60,8 @@ module cla_4bits_tb;
         A = 4'b1110; B = 4'b1111; Cin = 0; enable = 1;
         @(negedge clk); enable = 0;
 
-        @(negedge clk); $finish;
+        @(negedge clk); 
+        $finish;
     end
 
 endmodule
