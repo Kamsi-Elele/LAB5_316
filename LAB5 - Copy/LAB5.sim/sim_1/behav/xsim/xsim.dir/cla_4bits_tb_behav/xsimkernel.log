@@ -1,0 +1,2 @@
+Running: xsim.dir/cla_4bits_tb_behav/xsimk.exe -simmode gui -wdb cla_4bits_tb_behav.wdb -simrunnum 0 -socket 54988
+Design successfully loaded

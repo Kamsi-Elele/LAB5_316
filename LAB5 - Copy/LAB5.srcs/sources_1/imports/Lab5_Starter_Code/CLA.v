@@ -12,6 +12,7 @@ module CLA_4bits (
     wire [4:0] C;
     wire [3:0] Sum;
     wire Cout;
+    wire [4:0] result;
 
     // Assign initial carry-in
     assign C[0] = Cin;
@@ -50,22 +51,22 @@ assign C[4]= G[3] | P[3]&C[3];
     register_logic reg1 (.clk(clk), .enable(enable), .Data(result), .Q(Q));
 endmodule
 
-module register_logic (
-    input clk,
-    input enable,
-    input [4:0] Data,
-    output reg [4:0] Q
-);
+//module register_logic (
+//    input clk,
+//    input enable,
+//    input [4:0] Data,
+//    output reg [4:0] Q
+//);
 
 
-initial begin 
-    Q[4:0]  = 4'b0000; 
-    end
+//initial begin 
+//    Q[4:0]  = 4'b0000; 
+//    end
     
-    always @ (posedge clk) begin
-        if (enable)
-            Q <= Data;
-    end
-endmodule
+//    always @ (posedge clk) begin
+//        if (enable)
+//            Q <= Data;
+//    end
+//endmodule
 
 

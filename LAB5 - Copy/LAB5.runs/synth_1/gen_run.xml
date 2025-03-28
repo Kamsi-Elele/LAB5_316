@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1743126882" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/RCA_4bits.dcp">
-  <File Type="PA-TCL" Name="RCA_4bits.tcl"/>
   <File Type="REPORTS-TCL" Name="RCA_4bits_reports.tcl"/>
+  <File Type="RDS-UTIL" Name="CLA_4bits_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="CLA_4bits_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="RCA_4bits.tcl"/>
   <File Type="RDS-RDS" Name="RCA_4bits.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="RCA_4bits_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="RCA_4bits_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="RCA_4bits_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="RCA_4bits.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="RCA_4bits_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="RCA_4bits_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Lab5_Starter_Code/RegLogic.v">

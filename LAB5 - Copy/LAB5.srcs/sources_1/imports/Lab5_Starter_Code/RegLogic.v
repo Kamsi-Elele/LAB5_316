@@ -10,7 +10,7 @@ module register_logic (
 
 
 initial begin 
-    Q[4:0]  = 4'b0000; 
+    Q[4:0]  = 5'b00000; 
     end
     
     always @ (posedge clk) begin
